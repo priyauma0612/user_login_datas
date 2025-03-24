@@ -1,0 +1,106 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e0f7fa, #ffffff);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 2rem;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.2s ease;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #0077cc;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    margin: 8px 4px;
+    padding: 10px 16px;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #005fa3;
+  }
+  
+  textarea, input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  canvas {
+    margin-top: 20px;
+    width: 100% !important;
+    height: auto !important;
+  }
+  
+  /* Dark Mode */
+  .dark-mode {
+    background: linear-gradient(135deg, #121212, #1e1e1e);
+    color: #e0e0e0;
+  }
+  
+  .dark-mode .container {
+    background-color: #1f1f1f;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  }
+  
+  .dark-mode button {
+    background-color: #bb86fc;
+  }
+  
+  .dark-mode button:hover {
+    background-color: #985eff;
+  }
+  
+  .dark-mode textarea,
+  .dark-mode input {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+  }
+  
+  /* Fade Animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Profile Image */
+  .profile-section {
+    margin: 10px 0;
+  }
+  
+  #profilePreview {
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #0077cc;
+  }
+  

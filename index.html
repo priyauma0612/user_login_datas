@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Portfolio Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container fade-in">
+    <h1>📈 Portfolio Tracker</h1>
+    <button onclick="toggleTheme()">🌗 Toggle Dark Mode</button>
+
+    <div id="login-form">
+      <input type="email" id="email" placeholder="Email" />
+      <input type="password" id="password" placeholder="Password" />
+      <button onclick="login()">Login</button>
+      <button onclick="signup()">Sign Up</button>
+    </div>
+
+    <div id="dashboard" class="hidden">
+      <h2>Welcome, <span id="userEmail"></span></h2>
+
+      <div class="profile-section">
+        <label>Upload Profile Image:</label>
+        <input type="file" id="profileImage" accept="image/*" onchange="previewImage()" />
+        <img id="profilePreview" src="" alt="Profile Image" />
+      </div>
+
+      <label>Watchlist:</label>
+      <textarea id="watchlist"></textarea>
+
+      <label>Portfolio (symbol:shares):</label>
+      <textarea id="portfolio"></textarea>
+
+      <label>Notes:</label>
+      <textarea id="notes" placeholder="Add your personal notes here..."></textarea>
+
+      <div id="profitDisplay"></div>
+
+      <button onclick="saveData()">💾 Save Data</button>
+      <button onclick="calculateProfit()">📊 Show Profit</button>
+      <button onclick="exportCSV()">📁 Export to CSV</button>
+      <button onclick="logout()">🚪 Logout</button>
+
+      <canvas id="profitChart" width="300" height="200"></canvas>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
